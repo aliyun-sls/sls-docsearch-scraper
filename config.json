@@ -1,0 +1,29 @@
+{
+  "index_name": "sls-doc-test",
+  "start_urls": [
+    {
+      "url": "https://sls.aliyun.com/doc/",
+      "selectors_key": "v2",
+      "tags": [
+        "v2"
+      ]
+    }
+  ],
+  "sitemap_urls": [
+    "https://sls.aliyun.com/doc/sitemap.xml"
+  ],
+  "stop_urls": [],
+  "selectors": {
+    "v2": {
+      "lvl0": ".Layout h1",
+      "lvl1": ".Layout h2",
+      "lvl2": ".Layout h3",
+      "lvl3": ".Layout h4",
+      "lvl4": ".Layout h5",
+      "lvl5": ".Layout h6",
+      "text": ".Layout p, .Layout li"
+    }
+  },
+  "strip_chars": " .,;:#",
+  "nb_hits": 4206
+}

@@ -9,6 +9,7 @@ from requests_iap import IAPAuth
 from scrapy.crawler import CrawlerProcess
 
 from .algolia_helper import AlgoliaHelper
+from .opensearch_helper import OpenSearchHelper
 from .config.config_loader import ConfigLoader
 from .documentation_spider import DocumentationSpider
 from .strategies.default_strategy import DefaultStrategy
@@ -36,13 +37,13 @@ def run_config(config):
 
     strategy = DefaultStrategy(config)
 
-    algolia_helper = AlgoliaHelper(
-        config.app_id,
-        config.api_key,
-        config.index_name,
-        config.index_name_tmp,
-        AlgoliaSettings.get(config, strategy.levels),
-        config.query_rules
+    algolia_helper = OpenSearchHelper(
+        # config.app_id,
+        # config.api_key,
+        # config.index_name,
+        # config.index_name_tmp,
+        # AlgoliaSettings.get(config, strategy.levels),
+        # config.query_rules
     )
 
     root_module = 'src.' if __name__ == '__main__' else 'scraper.src.'
