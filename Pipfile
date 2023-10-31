@@ -18,6 +18,9 @@ algoliasearch = ">=2.0,<3.0"
 alibabacloud-tea-util = "*"
 alibabacloud-opensearch-util = "*"
 alibabacloud-credentials = "*"
+twisted = "==21.2.0"
+cryptography = "==36.0"
+pyopenssl = "==22.0.0"
 
 [dev-packages]
 pylint = "==2.3.1"
